@@ -162,3 +162,6 @@ const updateBook = { ...book, pages: 1210, moviePublicationDate: "2021-12-19" };
 
 console.log(updateBook)
 
+//Template literals of the book
+const summary = `${title} of the book`;
+console.log(summary);
