@@ -165,3 +165,48 @@ console.log(updateBook)
 //Template literals of the book
 const summary = `${title} of the book`;
 console.log(summary);
+
+
+// Ternary operators
+
+const pagesRange = pages > 1000 ? "over a thousand pages" : "less than 1000 pages";
+
+console.log('the book has ${pagesRange}')
+
+// arrow functions
+
+// const getYear = (str) => {
+
+//   return str.split("-")[0];
+
+// }
+
+// short method 
+const getYear = (str) => str.split("-")[0];
+
+
+console.log("jonas" && "Some string");
+
+console.log(0 && "some string");
+
+
+console.log(book.translations.spanish);
+console.log(false || "Some string");
+console.log(false || "Some string");
+
+
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+console.log(countWrong);
+
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+console.log(count); // it gives 0 it gives no data if it is null or undefined.
+
+// Optional chaining in javascript
+
+function getTotalReviewCount(book) {
+  const goodreads = books.reviews.goodreads.reviewsCount;
+  const librarything = books.reviews.librarything?.reviewsCount ?? 0; // Here the first option chaining ? will take the value if not undefined if it undefined it is passed to ternary operator and made to zero
+  return goodreads + librarything
+}
+
+console.log(getTotalReviewCount(book));
